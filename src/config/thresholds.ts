@@ -1,0 +1,12 @@
+export const Thresholds = {
+
+  LOW_NETWORK_SPEED: 20,
+
+  LOW_DEVICE_SCORE: 30,
+
+  HIGH_VOLATILITY: 80,
+
+  LOW_VOLATILITY: 20,
+
+  CACHE_EXPIRY_SECONDS: 60
+};
