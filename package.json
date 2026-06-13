@@ -1,33 +1,32 @@
 {
   "name": "adaptive-rendering-engine",
   "version": "1.0.0",
-  "description": "Adaptive Rendering Engine for intelligent rendering strategy selection",
-  "main": "dist/server/server.js",
+  "description": "Adaptive Rendering Engine",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node src/server/server.ts",
     "build": "tsc",
-    "start": "node dist/server/server.js",
+    "start": "node dist/core/engine.js",
+    "dev": "ts-node src/core/engine.ts",
     "test": "jest"
   },
   "keywords": [
-    "rendering",
+    "adaptive-rendering",
     "ssr",
     "ssg",
     "isr",
-    "adaptive-rendering",
+    "csr",
     "typescript"
   ],
-  "author": "Adaptive Rendering Engine Team",
+  "author": "ARE Research Team",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.0.10",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.5.4",
+    "typescript": "^5.6.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "jest": "^30.0.0",
-    "ts-jest": "^29.4.0"
+    "jest": "^30.0.0"
   }
 }
