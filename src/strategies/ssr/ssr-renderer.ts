@@ -1,27 +1,29 @@
-export class SSGCache {
+import {
+  IRenderer,
+  RequestContext,
+  RenderResult,
+  RenderingStrategy
+} from "../../core/types";
 
-  private cache = new Map<string, string>();
+export class SSRRenderer implements IRenderer {
 
-  set(
-    key: string,
-    value: string
-  ): void {
-    this.cache.set(key, value);
-  }
+  async render(
+    context: RequestContext
+  ): Promise<RenderResult> {
 
-  get(
-    key: string
-  ): string | undefined {
-    return this.cache.get(key);
-  }
+    const html = `
+      <html>
+      <body>
+        <h1>Server Side Rendering</h1>
+        <p>Rendered at request time</p>
+      </body>
+      </html>
+    `;
 
-  has(
-    key: string
-  ): boolean {
-    return this.cache.has(key);
-  }
-
-  clear(): void {
-    this.cache.clear();
+    return {
+      strategy: RenderingStrategy.SSR,
+      html,
+      renderTime: 0
+    };
   }
 }
